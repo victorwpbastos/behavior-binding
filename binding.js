@@ -16,7 +16,7 @@ module.exports = Marionette.Behavior.extend({
 			defaultBindings['[' + this.bindAttr + '="' + element[this.bindAttr] + '"]'] = element[this.bindAttr];
 		}.bind(this));
 
-		_.extend(this.view.bindings, defaultBindings);
+		this.view.bindings = _.extend({}, defaultBindings, this.view.bindings);
 	},
 
 	onRender: function() {
