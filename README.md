@@ -6,7 +6,7 @@
 
 1. Download [Backbone Stickit](https://github.com/NYTimes/backbone.stickit);
 2. Download the `binding.js` file;
-3. If you are using [Boiler](https://github.com/baltazzar/boiler), put the `binding.js` file inside the `application/behaviors`. Create the `behaviors` folder if it not exists.
+3. If you are using [Boiler](https://github.com/baltazzar/boiler), put the `binding.js` file inside the `application/behaviors` folder. Create the `behaviors` folder if it not exists.
 
 ## How to use
 
