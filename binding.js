@@ -4,9 +4,11 @@ var _ = require('underscore');
 require('backbone.stickit');
 
 module.exports = Marionette.Behavior.extend({
-	initialize: function() {
+	onRender: function() {
 		this.bindAttr = this.options.bindAttr || 'name';
 		this.view.bindings = _.result(this.options, 'bindings') || {};
+		this.populateDefaultBindings();
+		this.view.stickit();
 	},
 
 	populateDefaultBindings: function() {
@@ -17,11 +19,6 @@ module.exports = Marionette.Behavior.extend({
 		}.bind(this));
 
 		this.view.bindings = _.extend({}, defaultBindings, this.view.bindings);
-	},
-
-	onRender: function() {
-		this.populateDefaultBindings();
-		this.view.stickit();
 	},
 
 	onDestroy: function() {
